@@ -27,6 +27,8 @@ public class ProdutoMain {
                     double preco = scanner.nextDouble();
                     try {
                         produto = new Produto(nome, preco);
+                        produto.getNome();
+                        produto.getPreco();
                         System.out.println("Produto cadastrado com sucesso!");
                     } catch (IllegalArgumentException e) {
                         System.out.println("Erro: " + e.getMessage());
