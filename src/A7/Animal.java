@@ -32,7 +32,7 @@ public class Animal {
         System.out.println("Comendo...");
     }
     public void fazerSom(){
-        System.out.println("O som é : aleluia");
+        System.out.print("O som é :");
     }
 
 }

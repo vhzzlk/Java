@@ -6,6 +6,7 @@ public class Vaca extends Animal{
     }
     @Override
     public void fazerSom(){
-        System.out.println("O som é : Muuuu");
+        super.fazerSom();
+        System.out.println(" Muuuu");
     }
 }

@@ -6,6 +6,7 @@ public class Cachorro extends Animal{
     }
     @Override
     public void fazerSom(){
-        System.out.println("O som é: Au Au");
+        super.fazerSom();
+        System.out.println(" Au Au");
     }
 }
