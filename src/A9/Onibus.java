@@ -1,9 +1,8 @@
 package A9;
 
 public class Onibus extends Veiculo {
-    private static final float VELOCIDADE_MEDIA_KMH = 60.0f;
-    private static final float TEMPO_POR_PARADA_HORAS = 15.0f / 60.0f; // 15 minutos
-
+    private static final float VELOCIDADE = 60f;
+    private static final float TEMPO_PARADA_H = 15f / 60f;
     private final int numeroParadas;
 
     public Onibus(String modelo, int numeroParadas) {
@@ -17,8 +16,7 @@ public class Onibus extends Veiculo {
 
     @Override
     public float calcularTempo(float distancia) {
-        float tempoDeslocamento = distancia / VELOCIDADE_MEDIA_KMH;
-        float tempoParadas = numeroParadas * TEMPO_POR_PARADA_HORAS;
-        return tempoDeslocamento + tempoParadas;
+        float deslocamento = distancia / VELOCIDADE;
+        return deslocamento + numeroParadas * TEMPO_PARADA_H;
     }
 }

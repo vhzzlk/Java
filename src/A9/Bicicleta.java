@@ -1,7 +1,7 @@
 package A9;
 
 public class Bicicleta extends Veiculo {
-    private static final float VELOCIDADE_MEDIA_KMH = 20.0f;
+    private static final float VELOCIDADE = 20f;
 
     public Bicicleta(String modelo) {
         super(modelo);
@@ -9,6 +9,6 @@ public class Bicicleta extends Veiculo {
 
     @Override
     public float calcularTempo(float distancia) {
-        return distancia / VELOCIDADE_MEDIA_KMH;
+        return distancia / VELOCIDADE;
     }
 }
