@@ -15,7 +15,7 @@ public class Veiculo {
         System.out.println("Veiculo esta iniciando...");
     }
 
-    public float calcularTempo(float distancia) {
-        return 0f;
+    public double calcularTempo(double distancia) {
+        return 0.0;
     }
 }

@@ -1,8 +1,8 @@
 package A9;
 
 public class Onibus extends Veiculo {
-    private static final float VELOCIDADE = 60f;
-    private static final float TEMPO_PARADA_H = 15f / 60f;
+    private static final double VELOCIDADE = 60.0;
+    private static final double TEMPO_PARADA_H = 15.0 / 60.0;
     private final int numeroParadas;
 
     public Onibus(String modelo, int numeroParadas) {
@@ -10,13 +10,8 @@ public class Onibus extends Veiculo {
         this.numeroParadas = Math.max(0, numeroParadas);
     }
 
-    public int getNumeroParadas() {
-        return numeroParadas;
-    }
-
     @Override
-    public float calcularTempo(float distancia) {
-        float deslocamento = distancia / VELOCIDADE;
-        return deslocamento + numeroParadas * TEMPO_PARADA_H;
+    public double calcularTempo(double distancia) {
+        return (distancia / VELOCIDADE) + (numeroParadas * TEMPO_PARADA_H);
     }
 }
