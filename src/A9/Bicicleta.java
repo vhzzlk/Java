@@ -1,14 +1,14 @@
 package A9;
 
 public class Bicicleta extends Veiculo {
-    private static final double VELOCIDADE = 20.0;
+    private float VELOCIDADE = 20.0f;
 
     public Bicicleta(String modelo) {
         super(modelo);
     }
 
     @Override
-    public double calcularTempo(double distancia) {
+    public float calcularTempo(float distancia) {
         return distancia / VELOCIDADE;
     }
 }
