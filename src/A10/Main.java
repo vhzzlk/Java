@@ -27,7 +27,7 @@ public class Main {
         boolean continuar = true;
         while (continuar) {
 
-            System.out.println("\n1)Adicionar pessoa por ID no Cache");
+            System.out.println("\n1) Adicionar pessoa por ID no Cache");
             System.out.println("2) Mostrar cache");
             System.out.println("3) Mostrar banco");
             System.out.println("4) Buscar pessoa pelo ID");
@@ -43,7 +43,7 @@ public class Main {
 
                     Pessoa encontrada = null;
 
-
+                //  For para verificarmos se ja temos esse usuario no banco
                     for (Pessoa p : banco) {
                         if (p.getId() == idBuscado) {
                             encontrada = p;
@@ -66,8 +66,6 @@ public class Main {
                             System.out.println("Pessoa não encontrada.");
                         }
                     }
-
-
                     break;
 
                 case 2:
