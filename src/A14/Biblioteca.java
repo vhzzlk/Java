@@ -2,6 +2,7 @@ package A14;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.text.SimpleDateFormat;
 
 public class Biblioteca {
 
@@ -113,10 +114,13 @@ public class Biblioteca {
         }
         System.out.println("Empréstimos ativos do usuário " + u.nome() + " (id=" + u.id() + "):");
         boolean encontrou = false;
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         for (Emprestimo e : emprestimos) {
             if (!e.isDevolvido() && e.getUsuario().id() == idUsuario) {
                 Livro l = e.getLivro();
-                System.out.println("- " + l.codigo() + " | " + l.titulo() + " | " + l.autor());
+                System.out.println("- " + l.codigo() + " | " + l.titulo() + " | " + l.autor()
+                        + " | emprestado em: " + sdf.format(e.getDataEmprestimo())
+                        + " | devolução: " + sdf.format(e.getDataDevolucao()));
                 encontrou = true;
             }
         }

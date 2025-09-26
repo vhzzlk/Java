@@ -69,6 +69,8 @@ public class Main {
                     System.out.print("Código do livro: ");
                     String codEmp = sc.nextLine().trim();
                     System.out.println(biblioteca.emprestarLivro(idEmp, codEmp));
+                    // Mostra as datas do empréstimo e da devolução logo após emprestar
+                    biblioteca.listarEmprestimosPorUsuario(idEmp);
                     break;
 
                 case 5:
