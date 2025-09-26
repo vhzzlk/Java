@@ -2,7 +2,7 @@ package A14;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 
 public class Biblioteca {
 
@@ -114,13 +114,13 @@ public class Biblioteca {
         }
         System.out.println("Empréstimos ativos do usuário " + u.nome() + " (id=" + u.id() + "):");
         boolean encontrou = false;
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         for (Emprestimo e : emprestimos) {
             if (!e.isDevolvido() && e.getUsuario().id() == idUsuario) {
                 Livro l = e.getLivro();
                 System.out.println("- " + l.codigo() + " | " + l.titulo() + " | " + l.autor()
-                        + " | emprestado em: " + sdf.format(e.getDataEmprestimo())
-                        + " | devolução: " + sdf.format(e.getDataDevolucao()));
+                        + " | emprestado em: " + e.getDataEmprestimo().format(fmt)
+                        + " | devolução: " + e.getDataDevolucao().format(fmt));
                 encontrou = true;
             }
         }
